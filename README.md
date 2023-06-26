@@ -3,6 +3,8 @@
 `brew update && brew upgrade gh`
 `gh repo clone TOP-2023-GA-Team-2/iShareHealth`
 `cd iShareHealth/`
+
+## How to Create Branch Locally and Save To Remote Repo
 `git checkout -b myBranchName`
 `git commit --allow-empty -m "<myName>'s empty commit test"`
 `git push origin -u myBranchName`
@@ -11,7 +13,7 @@ Create a pull request for 'myBranchName' on GitHub by visiting: https://github.c
 
 ## How To Start App Locally:
 
-## How To Push New Commits:
+## How To Push New Commits to Existing Remote Branch:
 `git add .`
 `git commit -m "Add readme instructions"`
 `git push` 
