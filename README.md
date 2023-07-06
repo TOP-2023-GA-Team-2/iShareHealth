@@ -1,7 +1,7 @@
 ## How to Clone Repo
 `gh auth login`
 `brew update && brew upgrade gh`
-`gh repo clone TOP-2023-GA-Team-2/iShareHealth`
+`git clone -b development https://github.com/TOP-2023-GA-Team-2/iShareHealth.git`
 `cd iShareHealth/`
 
 ## How to Create Branch Locally and Save To Remote Repo
