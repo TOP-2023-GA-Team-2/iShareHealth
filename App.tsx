@@ -5,7 +5,6 @@
  * @format
  */
 // import { View, Text } from 'nativewind'
-// import styles from './App.css'
 import React from 'react';
 import type { PropsWithChildren } from 'react';
 import {
@@ -27,8 +26,14 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
 
 import Landing from './src/screens/Landing/Landing';
+import Login from './src/screens/Login/Login';
+
+
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -71,35 +76,10 @@ function App(): JSX.Element {
 
   return (
     <NavigationContainer>
-      <SafeAreaView>
-        <StatusBar
-          barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-
-        />
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-        >
-          <Header />
-          <Landing />
-          <View>
-            <Section title="Step One">
-              Edit <Text>App.tsx</Text> to change this
-              screen and then come back to see your edits.
-            </Section>
-            <Section title="See Your Changes">
-              <ReloadInstructions />
-            </Section>
-            <Section title="Debug">
-              <DebugInstructions />
-            </Section>
-            <Section title="Learn More">
-              <Text>Hello world</Text>
-              <Text>Read the docs to discover what to do next:</Text>
-            </Section>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
+      <Stack.Navigator>
+        <Stack.Screen name='Landing' component={Landing} />
+        <Stack.Screen name='Log In' component={Login} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
@@ -122,5 +102,37 @@ function App(): JSX.Element {
 //     fontWeight: '700',
 //   },
 // });
+
+// ! Not in use. We can only have Stack.Screen inside nvigator:
+
+// <SafeAreaView>
+// <StatusBar
+//   barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+
+// />
+// <ScrollView
+//   contentInsetAdjustmentBehavior="automatic"
+// >
+//   <Header />
+//   <Landing />
+//   <View>
+//     <Section title="Step One">
+//       Edit <Text>App.tsx</Text> to change this
+//       screen and then come back to see your edits.
+//     </Section>
+//     <Section title="See Your Changes">
+//       <ReloadInstructions />
+//     </Section>
+//     <Section title="Debug">
+//       <DebugInstructions />
+//     </Section>
+//     <Section title="Learn More">
+//       <Text>Hello world</Text>
+//       <Text>Read the docs to discover what to do next:</Text>
+//     </Section>
+//     <LearnMoreLinks />
+//   </View>
+// </ScrollView>
+// </SafeAreaView>
 
 export default App;
