@@ -26,7 +26,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import Landing from './screens/Landing/Landing';
+import Landing from './src/screens/Landing/Landing';
 
 type SectionProps = PropsWithChildren<{
   title: string;
