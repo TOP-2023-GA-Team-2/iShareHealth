@@ -10,7 +10,7 @@ console.log('Landing');
 const Landing = ({navigation}) => {
   return (
     <View className='flex-1 justify-center items-center'>
-      <Text >Welcome to iShareHealth! Your</Text>
+      <Text >Welcome to iShareHealth!</Text>
       <Text >I want to...</Text>
 
       <MainBtn text="Enter my test results" />
