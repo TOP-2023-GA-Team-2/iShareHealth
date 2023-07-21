@@ -32,6 +32,7 @@ const Stack = createNativeStackNavigator();
 
 import Landing from './src/screens/Landing/Landing';
 import Login from './src/screens/Login/Login';
+import GettingStarted from './src/screens/Getting Started/GettingStarted';
 
 
 
@@ -78,6 +79,7 @@ function App(): JSX.Element {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name='Landing' component={Landing} />
+        <Stack.Screen name='Get Started' component={GettingStarted} />
         <Stack.Screen name='Log In' component={Login} />
       </Stack.Navigator>
     </NavigationContainer>
