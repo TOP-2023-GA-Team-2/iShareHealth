@@ -5,17 +5,19 @@ import Modal from 'react-native-modal';
 interface ModalProps {
     isVisible: boolean;
     onClose: () => void;
+
 }
 
-const ModalComponent: React.FC<ModalProps> = ({isVisible, onClose }) => {
+const ModalComponent: React.FC<ModalProps> = ({isVisible, onClose, onButtonPress, children }) => {
+  
+
     return (
-        <Modal isVisible={isVisible} onBackdropPress={onClose}>
+        <Modal isVisible={isVisible} >
             <View className="bg-green-400 w-90 h-90">
-                <Text>This is a modal</Text>
-                <TouchableOpacity onPress={onClose}>
-                    <Text>Close Modal</Text>
-                </TouchableOpacity>
-                
+            <TouchableOpacity onPress={onClose} >
+                <Text className='font-bold text-right text-xl m-2'>X</Text>
+            </TouchableOpacity>
+                {children}
             </View>
         </Modal>
     );

@@ -14,10 +14,25 @@ const Confirmation = ({navigation}) => {
     
     const toggleModal = () => {
         setModalVisible(!isModalVisible)
+        
     }
+
+    const messageHeading = "Thank you for your time!"
+
+    const messageBody = "Maximize the benefits of your testing experience by creaeting an iHealthShare account. Gain access to a range of convenient features designed to streamline your test-taking process in the future."
+
+    const handleCreateAccount = () => {
+        navigation.navigate('Log In'); // Replace 'Log In' with the screen name you want to navigate to
+        toggleModal(); // Close the modal after navigation
+      };
+
     return (
-        <View className=''>
-            <ModalComponent isVisible={isModalVisible} onClose={toggleModal} />
+        <View className='items-center'>
+            <ModalComponent isVisible={isModalVisible} onClose={toggleModal}>
+                <Text className='text-center font-bold text-xl m-2'>{messageHeading}</Text>
+                <Text className='text-center m-2'>{messageBody}</Text>
+                <MainBtn text="Create an Account" onPress={handleCreateAccount}/>
+            </ModalComponent>
         </View>
     );
 }
