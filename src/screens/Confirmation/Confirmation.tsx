@@ -28,6 +28,7 @@ const Confirmation = ({navigation}) => {
 
     return (
         <View className='items-center'>
+            <MainBtn onPress={() => navigation.navigate('Landing')} text="Home" />
             <ModalComponent isVisible={isModalVisible} onClose={toggleModal}>
                 <Text className='text-center font-bold text-xl m-2'>{messageHeading}</Text>
                 <Text className='text-center m-2'>{messageBody}</Text>
