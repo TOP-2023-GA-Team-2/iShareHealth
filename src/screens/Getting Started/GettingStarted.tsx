@@ -4,17 +4,20 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
 
-import MainBtn from '../../components/MainBtn/MainBtn';
-console.log('Landing');
+import GetStartedBtn from '../../components/GetStartedBtn/GetStartedBtn'
 
 const GettingStarted = ({navigation}) => {
   return (
     <View className='flex-1 justify-center items-center'>
-      <Text >Welcome to iShareHealth!</Text>
-      <Text >I want to...</Text>
+      <Text >iShareHealth</Text>
+      <Text >How can we help you today?</Text>
 
-      <MainBtn text="Enter my test results" />
-      <MainBtn onPress={() => navigation.navigate('Log In')} text="Sign in/up" />
+      <View className='flex-row flex-wrap m-10 justify-around items-center'>
+        <GetStartedBtn text="Rapid Report: Share my results" />
+        <GetStartedBtn onPress={() => navigation.navigate('Log In')} text="I need help taking my test" />
+        <GetStartedBtn onPress={() => navigation.navigate('Log In')} text="What is my COVID-19 risk?" />
+        <GetStartedBtn onPress={() => navigation.navigate('Log In')} text="I need other information" />
+      </View>
 
     </View>
   );
