@@ -27,12 +27,16 @@ const Confirmation = ({navigation}) => {
       };
 
     return (
-        <View className='items-center'>
+        <View className='confirmation h-full flex items-center justify-center'>
             <MainBtn onPress={() => navigation.navigate('Landing')} text="Home" />
             {/* unable to keep background screen unshaded and add drop shadow. react native modal shades behind it by default. */}
             <ModalComponent isVisible={isModalVisible} onClose={toggleModal} >
-                <Text className='text-center font-bold text-xl m-2'>{messageHeading}</Text>
-                <Text className='text-center m-10'>{messageBody}</Text>
+                <View className=''>
+                    <Text className='text-center font-bold text-xl m-2 '>{messageHeading}</Text>
+                </View>
+                <View className=''>
+                    <Text className='text-center m-10 '>{messageBody}</Text>
+                </View>
                 <MainBtn text="Create an Account" onPress={handleCreateAccount}/>
             </ModalComponent>
         </View>

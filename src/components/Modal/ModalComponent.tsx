@@ -15,13 +15,13 @@ const ModalComponent: React.FC<ModalProps> = ({isVisible, onClose, children }) =
         <Modal isVisible={isVisible} >
             
 
-                <View className='h-3/4 rounded drop-shadow-2xl bg-emerald-300 justify-center place-content-between'>
-                    <View className=''>
-                        <TouchableOpacity onPress={onClose} >
-                            <Text className='font-bold text-right text-xl m-2'>X</Text>
+                <View className='modal h-3/4 rounded drop-shadow-2xl bg-teal-200 flex-col'>
+                    <View className='close-block '>
+                        <TouchableOpacity onPress={onClose} className=' '>
+                            <Text className='font-bold text-right text-xl m-2 '>X</Text>
                         </TouchableOpacity>
                     </View>
-                    <View className=' items-center'>
+                    <View className=' content-block flex-col items-stretch flex-grow flex-col justify-between items-center m-5'>
 
                     {children}
                     </View>
