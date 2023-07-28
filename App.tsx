@@ -32,6 +32,7 @@ const Stack = createNativeStackNavigator();
 
 import Landing from './src/screens/Landing/Landing';
 import Login from './src/screens/Login/Login';
+import Confirmation from './src/screens/Confirmation/Confirmation';
 
 
 
@@ -79,6 +80,7 @@ function App(): JSX.Element {
       <Stack.Navigator>
         <Stack.Screen name='Landing' component={Landing} />
         <Stack.Screen name='Log In' component={Login} />
+        <Stack.Screen name='Confirmation' component={Confirmation} />
       </Stack.Navigator>
     </NavigationContainer>
   );
