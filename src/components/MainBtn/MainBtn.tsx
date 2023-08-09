@@ -1,14 +1,30 @@
-import { Pressable, View, Text } from "react-native";
+import { Pressable, View, Text, StyleSheet } from "react-native";
 
 const MainBtn = (props) => {
   
   return (
-    <View>
-      <Pressable onPress={props.onPress} className="bg-green-400 w-60 h-10 m-2">{props.children}
-        <Text className="flex flex-row justify-center items-center text-white text-lg text-center">{props.text}</Text>
+    <View className=" ">
+      <Pressable onPress={props.onPress} className="bg-emerald-800  w-60 h-10 m-2 ">{props.children}
+      <View className="text-container " style={styles.container} >
+        <Text className="text-white text-lg text-center" style={styles.headerText}>{props.text}</Text>
+      </View>
       </Pressable>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  headerText: {
+  
+    textAlign: "center",
+  
+  },
+  
+});
 
 export default MainBtn;

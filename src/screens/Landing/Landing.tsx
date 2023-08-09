@@ -15,6 +15,7 @@ const Landing = ({navigation}) => {
 
       <MainBtn onPress={() => navigation.navigate('Get Started')} text="Get Started" />
       <MainBtn onPress={() => navigation.navigate('Log In')} text="Sign in/up" />
+      <MainBtn onPress={() => navigation.navigate('Confirmation')} text="confirmation" />
 
     </View>
   );
