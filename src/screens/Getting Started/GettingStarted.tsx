@@ -12,7 +12,7 @@ const GettingStarted = ({navigation}) => {
       <Text >iShareHealth</Text>
       <Text >How can we help you today?</Text>
 
-      <View className='flex-row flex-wrap m-10 justify-around items-center'>
+      <View className='flex-row flex-wrap m-0 justify-around items-center content-around gap-0'>
         <GetStartedBtn text="Rapid Report: Share my results" />
         <GetStartedBtn onPress={() => navigation.navigate('Log In')} text="I need help taking my test" />
         <GetStartedBtn onPress={() => navigation.navigate('Log In')} text="What is my COVID-19 risk?" />

@@ -7,8 +7,8 @@ const GetStartedBtn = (props) => {
   
   return (
     <View>
-      <Pressable onPress={props.onPress} className="bg-blue-400 text-black w-20 h-20 m-5">{props.children}
-        <Text className="flex flex-row justify-center items-center text-black text-lg text-center">{props.text}</Text>
+      <Pressable onPress={props.onPress} className="bg-white border-solid border-2 border-emerald-600 rounded-[15px] text-black w-[140px] h-[140px] mb-2 flex-wrap text-center justify-center items-center content-center flex-wrap">{props.children}
+        <Text className="flex flex-row text-black text-sm text-center flex-wrap w-[120px] ">{props.text}</Text>
       </Pressable>
     </View>
   );
