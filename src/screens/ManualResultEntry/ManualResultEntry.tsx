@@ -1,39 +1,44 @@
 import { useMemo, useState } from 'react';
 import { Text, View, Button } from 'react-native';
 import {Picker} from '@react-native-picker/picker'
-import { RadioGroup } from 'react-native-radio-buttons-group';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import MainBtn from '../../components/MainBtn/MainBtn';
 
-const ManualResultEntry: React.FC = () => {
+const radioButtons: RadioButtonProps[] = useMemo(() => ([
+    {
+        id: '1',
+        label: 'Positive',
+        value: 'Positive'
+    },
+    {
+        id: '2',
+        label: 'Negative',
+        value: 'Negative'
+    },
+    {
+        id: '3',
+        label: 'Invalid Result',
+        value: 'Invalid Result'
+    },
+]), []);
 
+const ManualResultEntry: React.FC = () => {
+    //kit state
     const [kit, setKit] = useState('')
 
+    //result state
     const [result, setResult] = useState('')
 
-// temporary til backend connected
+    //radio button state
+    const [radio, setRadio] = useState(null)
+
+// temporary data til backend connected
     const kits = ['Binax', 'FlowFlex', 'iHealthLabs']
 
     const results = ['Positive', 'Negative', 'Invalid Result']
 
-    const radioButtons = useMemo(() => ([
-        {
-            id: '1',
-            label: 'Positive',
-            value: 'Positive'
-        },
-        {
-            id: '2',
-            label: 'Negative',
-            value: 'Negative'
-        },
-        {
-            id: '3',
-            label: 'Invalid Result',
-            value: 'Invalid Result'
-        },
-    ]), []);
+    
 
 //look back for TS example
 
