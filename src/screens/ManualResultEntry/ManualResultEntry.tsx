@@ -38,19 +38,20 @@ const ManualResultEntry: React.FC = ({navigation}) => {
     {
         id: '1',
         label: 'Positive',
-        value: 'Positive'
+        value: 'Positive',
     },
     {
         id: '2',
         label: 'Negative',
-        value: 'Negative'
+        value: 'Negative',
     },
     {
         id: '3',
         label: 'Invalid Result',
-        value: 'Invalid Result'
+        value: 'Invalid Result',
     }
 ];
+
     
 
 //look back for TS example
