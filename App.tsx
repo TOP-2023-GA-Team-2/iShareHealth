@@ -33,11 +33,7 @@ const Stack = createNativeStackNavigator();
 import Landing from './src/screens/Landing/Landing';
 import Login from './src/screens/Login/Login';
 import Confirmation from './src/screens/Confirmation/Confirmation';
-<<<<<<< HEAD
-// import CameraScreen from './src/screens/CameraScreen/CameraScreen';
 import ManualResultEntry from './src/screens/ManualResultEntry/ManualResultEntry';
-=======
->>>>>>> 79382dd112d048ae8a4dc9117ac8ab2e6d7b31d5
 
 
 
@@ -86,11 +82,9 @@ function App(): JSX.Element {
         <Stack.Screen name='Landing' component={Landing} />
         <Stack.Screen name='Log In' component={Login} />
         <Stack.Screen name='Confirmation' component={Confirmation} />
-<<<<<<< HEAD
-        {/* <Stack.Screen name='CameraScreen' component={CameraScreen} /> */}
+
         <Stack.Screen name='ManualResultEntry' component={ManualResultEntry} />
-=======
->>>>>>> 79382dd112d048ae8a4dc9117ac8ab2e6d7b31d5
+
       </Stack.Navigator>
     </NavigationContainer>
   );
