@@ -1,11 +1,41 @@
 import { useMemo, useState } from 'react';
 import { Text, View, Button } from 'react-native';
-import {Picker} from '@react-native-picker/picker'
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import DropDownMenu from '../../components/DropDownMenu/DropDownMenu';
+import RadioBtns from '../../components/RadioBtns/RadioBtns';
 import MainBtn from '../../components/MainBtn/MainBtn';
 
-const radioButtons: RadioButtonProps[] = useMemo(() => ([
+const ManualResultEntry: React.FC = (navigation) => {
+
+    
+    
+    //kit state
+    const [kit, setKit] = useState('')
+    
+    
+    //result state
+    const [result, setResult] = useState('')
+    
+    // temporary data til backend connected
+    const kits = [
+        {
+            label: 'Binax',
+            value: 'BinaxNOW COVID-19 Ag Card Home Test'
+        },
+        {
+            label: 'FlowFlex',
+            value: 'Flowflex COVID-19 Antigen Home Test'
+        },
+        {
+            label: 'iHealthLabs',
+            value: 'iHealth COVID-19 Antigen Rapid Test'
+        } 
+    ]
+
+    const testResults = [
+
     {
         id: '1',
         label: 'Positive',
@@ -20,24 +50,8 @@ const radioButtons: RadioButtonProps[] = useMemo(() => ([
         id: '3',
         label: 'Invalid Result',
         value: 'Invalid Result'
-    },
-]), []);
-
-const ManualResultEntry: React.FC = () => {
-    //kit state
-    const [kit, setKit] = useState('')
-
-    //result state
-    const [result, setResult] = useState('')
-
-    //radio button state
-    const [radio, setRadio] = useState(null)
-
-// temporary data til backend connected
-    const kits = ['Binax', 'FlowFlex', 'iHealthLabs']
-
-    const results = ['Positive', 'Negative', 'Invalid Result']
-
+    }
+];
     
 
 //look back for TS example
@@ -46,25 +60,20 @@ const ManualResultEntry: React.FC = () => {
     <View className='flex-1 justify-center items-center'>
       <Text >Enter Your Test Result</Text>
       <Text >Step 1: Select Test Kit</Text>
-      <Picker
+
+      <DropDownMenu
+        title='Select Test Kit Model:'
+        options={kits}
         selectedValue={kit}
-        onValueChange={(itemValue) => setKit(itemValue)}
-      >
-        <Picker.Item label="Select a kit" value="" />
-        {kits.map((kit) => (
-          <Picker.Item key={kit} label={kit} value={kit} />
-        ))}
-      </Picker>
-      <Text>Step 2: Select Your Test Result</Text>
-      {results.map((result) => (
-        <View key={result}>
-          <RadioGroup
-            value={result}
-            selected={selectedResult === result}
-            onPress={() => setSelectedResult(result)}
-          />
-          <Text>{result}</Text>
-      <MainBtn onPress={() => navigation.navigate('CameraScreen')} text="Scan my test" />
+        onValueChange={(value) => setKit(value)}
+        />
+      <RadioBtns
+        title='Step 2: Select Your Test Result'
+        radioButtons={testResults}
+        onValueChange={(value) => setResult(value)}
+        />
+
+      <MainBtn text="Submit my test result" onPress={() => navigation.navigate('Landing')} />
 
     </View>
   );

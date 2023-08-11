@@ -1,5 +1,4 @@
 import { RadioButtonProps, RadioGroup } from 'react-native-radio-buttons-group';
-import { useMemo, useState } from 'react';
 import {View, Text} from 'react-native'
 
 
