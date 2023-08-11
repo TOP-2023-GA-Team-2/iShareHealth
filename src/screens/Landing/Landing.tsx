@@ -15,7 +15,7 @@ const Landing = ({navigation}) => {
 
       <MainBtn onPress={() => navigation.navigate('ManualResultEntry')} text="Enter my Test Result" />
       <MainBtn onPress={() => navigation.navigate('Log In')} text="Sign in/up" />
-      {/* <MainBtn onPress={() => navigation.navigate('CameraScreen')} text="Scan my test" /> */}
+      <MainBtn onPress={() => navigation.navigate('Confirmation')} text="confirmation" />
 
     </View>
   );
