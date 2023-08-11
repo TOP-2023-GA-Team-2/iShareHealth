@@ -2,12 +2,11 @@ import { useMemo, useState } from 'react';
 import { Text, View, Button } from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import DropDownMenu from '../../components/DropDownMenu/DropDownMenu';
 import RadioBtns from '../../components/RadioBtns/RadioBtns';
 import MainBtn from '../../components/MainBtn/MainBtn';
 
-const ManualResultEntry: React.FC = (navigation) => {
+const ManualResultEntry: React.FC = ({navigation}) => {
 
     
     
@@ -73,7 +72,7 @@ const ManualResultEntry: React.FC = (navigation) => {
         onValueChange={(value) => setResult(value)}
         />
 
-      <MainBtn text="Submit my test result" onPress={() => navigation.navigate('Landing')} />
+      <MainBtn text="Submit my test result" onPress={() => navigation.navigate('Confirmation')} />
 
     </View>
   );
