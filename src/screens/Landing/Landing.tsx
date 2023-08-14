@@ -13,7 +13,7 @@ const Landing = ({navigation}) => {
       <Text >Welcome to iShareHealth!</Text>
       <Text >I want to...</Text>
 
-      <MainBtn text="Enter my test results" />
+      <MainBtn onPress={() => navigation.navigate('Camera Screen')} text="Enter my test results" />
       <MainBtn onPress={() => navigation.navigate('Log In')} text="Sign in/up" />
       <MainBtn onPress={() => navigation.navigate('Confirmation')} text="confirmation" />
 
