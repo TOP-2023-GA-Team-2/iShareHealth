@@ -67,6 +67,7 @@ const ManualResultEntry: React.FC = ({navigation}) => {
         selectedValue={kit}
         onValueChange={(value) => setKit(value)}
         />
+      
       <RadioBtns
         title='Step 2: Select Your Test Result'
         radioButtons={testResults}
