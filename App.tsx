@@ -34,7 +34,7 @@ import Landing from './src/screens/Landing/Landing';
 import Login from './src/screens/Login/Login';
 import Confirmation from './src/screens/Confirmation/Confirmation';
 import ManualResultEntry from './src/screens/ManualResultEntry/ManualResultEntry';
-
+import GettingStarted from './src/screens/Getting Started/GettingStarted';
 
 
 type SectionProps = PropsWithChildren<{
@@ -80,6 +80,7 @@ function App(): JSX.Element {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name='Landing' component={Landing} />
+        <Stack.Screen name='Get Started' component={GettingStarted} />
         <Stack.Screen name='Log In' component={Login} />
         <Stack.Screen name='Confirmation' component={Confirmation} />
 
