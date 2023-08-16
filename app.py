@@ -36,6 +36,6 @@ if uploaded_file is not None:
     prob = round(prob, 2)
     st.write(f'The probability of Positive is {prob}')
     if prediction[0][0] >= 0.5:
-        st.write("Test Result: Positive")
+        st.write("Your Test Result: Positive")
     else:
-        st.write("Test Result: Negative")
+        st.write("Your Test Result: Negative")

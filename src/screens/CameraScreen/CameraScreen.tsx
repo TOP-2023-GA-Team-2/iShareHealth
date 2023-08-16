@@ -8,7 +8,7 @@ const CameraScreen = () => {
     return (
         <View>
             <MainBtn text="Take Photo of Test Results" />
-            <MainBtn text="Upload Test Results" onPress={() => Linking.openURL('http://localhost:8502')} />
+            <MainBtn text="Upload Photo" onPress={() => Linking.openURL('http://localhost:8502')} />
         </View>
     );
 }
