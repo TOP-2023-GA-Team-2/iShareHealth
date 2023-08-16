@@ -10,14 +10,12 @@ console.log('Landing');
 const Landing = ({navigation}) => {
   return (
     <View className='flex-1 justify-center items-center'>
-      <Text >Welcome to iShareHealth!</Text>
-      <Text >I want to...</Text>
+      <Text className='text-center m-5'>Stay informed and connected with iShareHealth, the ultimate COVID test app</Text>
 
 
-      <MainBtn onPress={() => navigation.navigate('ManualResultEntry')} text="Enter my Test Result" />
-      <MainBtn onPress={() => navigation.navigate('Get Started')} text="Get Started" />
-      <MainBtn onPress={() => navigation.navigate('Log In')} text="Sign in/up" />
-      <MainBtn onPress={() => navigation.navigate('Confirmation')} text="confirmation" />
+      <MainBtn onPress={() => navigation.navigate('Get Started')} text="Continue as Guest" />
+      <MainBtn onPress={() => navigation.navigate('Log In')} text="Sign In" />
+      <MainBtn onPress={() => navigation.navigate('Log In')} text="Register" />
 
     </View>
   );

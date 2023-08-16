@@ -58,14 +58,14 @@ const ManualResultEntry: React.FC = ({navigation}) => {
 
   return (
     <View className='flex-1 justify-center items-center'>
-      <Text >Enter Your Test Result</Text>
-      <Text >Step 1: Select Test Kit</Text>
+      <Text className='font-bold m-2'>Enter Your Test Result</Text>
 
       <DropDownMenu
-        title='Select Test Kit Model:'
+        title='Step 1: Select Test Kit:'
         options={kits}
         selectedValue={kit}
         onValueChange={(value) => setKit(value)}
+        style=''
         />
       
       <RadioBtns

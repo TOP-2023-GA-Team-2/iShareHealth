@@ -15,7 +15,7 @@ const ModalComponent: React.FC<ModalProps> = ({isVisible, onClose, children }) =
         <Modal isVisible={isVisible} >
             
 
-                <View className='modal h-3/4 rounded drop-shadow-2xl bg-teal-200 flex-col'>
+                <View className='modal h-3/4 rounded drop-shadow-2xl bg-emerald-200 flex-col'>
                     <View className='close-block '>
                         <TouchableOpacity onPress={onClose} className=' '>
                             <Text className='font-bold text-right text-xl m-2 '>X</Text>

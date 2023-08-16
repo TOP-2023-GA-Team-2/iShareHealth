@@ -20,6 +20,7 @@ const DropDownMenu: React.FC<PickerProps> = ({
     options,
     onValueChange,
     selectedValue,
+
 }) => {
 
     return (
@@ -29,7 +30,7 @@ const DropDownMenu: React.FC<PickerProps> = ({
                selectedValue={selectedValue}
                onValueChange={onValueChange} 
             >
-                <Picker.Item label="Select your test kit" value=""/>
+                <Picker.Item label="Select" value=""/>
                 {options.map((option) => (
                     <Picker.Item
                         key={option.value}
