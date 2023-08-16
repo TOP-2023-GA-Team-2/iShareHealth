@@ -60,17 +60,16 @@ const ManualResultEntry: React.FC = ({navigation}) => {
     <View className='flex-1 justify-center items-center'>
       <Text className='font-bold text-lg'>Enter Your Test Result</Text>
 
-        <Text className='text-center m-2'>Or, upload an image of your test result and analyze it with our machine learning function &#40; Beta &#41;</Text>
-        <MainBtn onPress={() => Linking.openURL('https://gatopsprint2023-hjhfyeiconra8y36qrkewd.streamlit.app/')} text="Upload test image" />
-      <Text >Step 1: Select Test Kit</Text>
+        <Text className='text-center m-2'>Enter manually below OR upload an image of your test result and analyze it with our machine learning function &#40; Beta &#41;</Text>
+        <MainBtn className='m-2' onPress={() => Linking.openURL('https://gatopsprint2023-hjhfyeiconra8y36qrkewd.streamlit.app/')} text="Upload test image" />
 
+    <View className='m-2'>
 
       <DropDownMenu
         title='Step 1: Select Test Kit:'
         options={kits}
         selectedValue={kit}
         onValueChange={(value) => setKit(value)}
-        style=''
         />
       
       <RadioBtns
@@ -78,6 +77,7 @@ const ManualResultEntry: React.FC = ({navigation}) => {
         radioButtons={testResults}
         onValueChange={(value) => setResult(value)}
         />
+    </View>
 
       <MainBtn text="Submit my test result" onPress={() => navigation.navigate('Confirmation')} />
 
