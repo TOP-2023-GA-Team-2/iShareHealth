@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Text, View, Button } from 'react-native';
+import { Text, View, Button, Linking } from 'react-native';
 
 import { NavigationContainer } from '@react-navigation/native';
 import DropDownMenu from '../../components/DropDownMenu/DropDownMenu';
@@ -58,7 +58,10 @@ const ManualResultEntry: React.FC = ({navigation}) => {
 
   return (
     <View className='flex-1 justify-center items-center'>
-      <Text >Enter Your Test Result</Text>
+      <Text className='font-bold text-lg'>Enter Your Test Result</Text>
+
+        <Text className='text-center m-2'>Or, upload an image of your test result and analyze it with our machine learning function &#40; Beta &#41;</Text>
+        <MainBtn onPress={() => Linking.openURL('https://gatopsprint2023-hjhfyeiconra8y36qrkewd.streamlit.app/')} text="Upload test image" />
       <Text >Step 1: Select Test Kit</Text>
 
       <DropDownMenu

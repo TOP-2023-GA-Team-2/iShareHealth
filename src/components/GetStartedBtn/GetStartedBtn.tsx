@@ -1,9 +1,9 @@
-import React from "react";
 import { Pressable, View, Text } from "react-native";
 
 
 
 const GetStartedBtn = (props) => {
+  
   
   return (
     <View>
