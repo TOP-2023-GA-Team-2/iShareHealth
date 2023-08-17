@@ -1,6 +1,7 @@
 import { Text, View, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import BackgroundImage from '../../components/BackgroundImage/BackgroundImage';
 
 
 
@@ -10,6 +11,8 @@ console.log('Landing');
 const Landing = ({navigation}) => {
   return (
     <View className='flex-1 justify-center items-center'>
+
+
       <Text className='text-center m-5'>Stay informed and connected with iShareHealth, the ultimate COVID test app</Text>
 
 

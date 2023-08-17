@@ -35,6 +35,7 @@ import Login from './src/screens/Login/Login';
 import Confirmation from './src/screens/Confirmation/Confirmation';
 import ManualResultEntry from './src/screens/ManualResultEntry/ManualResultEntry';
 import GettingStarted from './src/screens/Getting Started/GettingStarted';
+import RiskResources from './src/screens/RiskResources/RiskResources';
 
 
 type SectionProps = PropsWithChildren<{
@@ -45,7 +46,8 @@ function Section({ children, title }: SectionProps): JSX.Element {
   // const isDarkMode = useColorScheme() === 'dark';
   return (
     // <View style={styles.sectionContainer}>
-    <View>
+    <View >
+
       {/* <Text
         style={[
           styles.sectionTitle,
@@ -77,12 +79,14 @@ function App(): JSX.Element {
   // };
 
   return (
-    <NavigationContainer>
+    <NavigationContainer >
+
       <Stack.Navigator>
         <Stack.Screen name='Landing' component={Landing} />
         <Stack.Screen name='Get Started' component={GettingStarted} />
         <Stack.Screen name='Log In' component={Login} />
         <Stack.Screen name='Confirmation' component={Confirmation} />
+        <Stack.Screen name='Risk Resources' component={RiskResources} />
 
         <Stack.Screen name='ManualResultEntry' component={ManualResultEntry} />
 
