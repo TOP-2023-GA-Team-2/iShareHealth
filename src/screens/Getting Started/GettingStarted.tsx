@@ -6,12 +6,16 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 
 import GetStartedBtn from '../../components/GetStartedBtn/GetStartedBtn'
+import BackgroundImage from '../../components/BackgroundImage/BackgroundImage';
+
 
 
 
 
 const GettingStarted = ({navigation}) => {
   return (
+    <BackgroundImage>
+
     <View className='flex-1 justify-center items-center'>
       <Text >iShareHealth</Text>
       <Text className='mb-5'>How can we help you today?</Text>
@@ -24,6 +28,7 @@ const GettingStarted = ({navigation}) => {
       </View>
 
     </View>
+    </BackgroundImage>
   );
 }
 

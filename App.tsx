@@ -36,6 +36,8 @@ import Confirmation from './src/screens/Confirmation/Confirmation';
 import ManualResultEntry from './src/screens/ManualResultEntry/ManualResultEntry';
 import GettingStarted from './src/screens/Getting Started/GettingStarted';
 import RiskResources from './src/screens/RiskResources/RiskResources';
+// import backgroundImage from './src/assets/images/backgroundImage.png'
+
 
 
 type SectionProps = PropsWithChildren<{
@@ -47,6 +49,8 @@ function Section({ children, title }: SectionProps): JSX.Element {
   return (
     // <View style={styles.sectionContainer}>
     <View >
+      
+
 
       {/* <Text
         style={[
@@ -79,8 +83,9 @@ function App(): JSX.Element {
   // };
 
   return (
+  
     <NavigationContainer >
-
+      
       <Stack.Navigator>
         <Stack.Screen name='Landing' component={Landing} />
         <Stack.Screen name='Get Started' component={GettingStarted} />
@@ -96,7 +101,7 @@ function App(): JSX.Element {
 }
 
 // const styles = StyleSheet.create({
-//   sectionContainer: {
+  //   sectionContainer: {
 //     marginTop: 32,
 //     paddingHorizontal: 24,
 //   },

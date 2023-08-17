@@ -1,34 +1,29 @@
-import { ImageBackground, SafeAreaView, Text, View } from 'react-native';
-
-import image from './backgroundImage.png'
-
-
+// ReusableBackground.tsx
+import React from 'react';
+import { ImageBackground, StyleSheet } from 'react-native';
 
 
-const BackgroundImage: React.FC = ({
-    
-}) => {
-    const image = {
-        uri:
-          'src/assets/backgroundImage.png',
-      };
-    
-      return (
-        <SafeAreaView>
-          <ImageBackground source={image} resizeMode="cover" style={{ height: 400 }}>
-            <View
-              style={{
-                flex: 1,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                backgroundColor: 'rgba(0,0,0,0.4)',
-              }}
-            >
-            </View>
-          </ImageBackground>
-        </SafeAreaView>
-      );
+const backgroundImage = require('../../assets/images/backgroundImage.png')
+
+
+interface ReusableBackgroundProps {
+  children: React.ReactNode;
 }
 
-export default BackgroundImage
+const styles = StyleSheet.create({
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover',
+    // Other styling for the background
+  },
+});
+
+const ReusableBackground: React.FC<ReusableBackgroundProps> = ({ children }) => {
+  return (
+    <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
+      {children}
+    </ImageBackground>
+  );
+};
+
+export default ReusableBackground;

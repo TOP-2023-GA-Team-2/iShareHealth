@@ -5,6 +5,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import DropDownMenu from '../../components/DropDownMenu/DropDownMenu';
 import RadioBtns from '../../components/RadioBtns/RadioBtns';
 import MainBtn from '../../components/MainBtn/MainBtn';
+import BackgroundImage from '../../components/BackgroundImage/BackgroundImage';
+
 
 const ManualResultEntry: React.FC = ({navigation}) => {
 
@@ -57,6 +59,8 @@ const ManualResultEntry: React.FC = ({navigation}) => {
 //look back for TS example
 
   return (
+    <BackgroundImage>
+
     <View className='flex-1 justify-center items-center'>
       <Text className='font-bold text-lg'>Enter Your Test Result</Text>
 
@@ -82,6 +86,7 @@ const ManualResultEntry: React.FC = ({navigation}) => {
       <MainBtn text="Submit my test result" onPress={() => navigation.navigate('Confirmation')} />
 
     </View>
+        </BackgroundImage>
   );
 }
 
